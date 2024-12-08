@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <form id="login-form">
+            <h2>Enter Password</h2>
+            <input 
+                type="password" 
+                id="password-input" 
+                placeholder="Enter password" 
+                required
+            >
+            <button type="submit">Login</button>
+            <div id="error-message" class="error"></div>
+        </form>
+    </div>
+
+    <div id="gallery-container" style="display: none;">
+        <div class="gallery-controls">
+            <select id="category-selector">
+                <!-- Categories will be populated dynamically by JavaScript -->
+            </select>
+            <button id="logout-btn">Logout</button>
+        </div>
+        
+        <div id="photo-grid">
+            <!-- Media will be dynamically loaded here -->
+        </div>
+
+        <!-- Maximized view container -->
+        <div id="maximized-view" style="display: none;"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
